@@ -1,5 +1,4 @@
 import logo from './wayfair-partner-home-logo.png';
-import iconUser from './icon-user.svg';
 import './App.scss';
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
     <div className="App">
       <header className="header">
         <a className="logo" href="/">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="logo__img" alt="Wayfair Partner Home" />
         </a>
         <div className="user-nav">
           <button className="user-nav__icon user-nav__icon--logged-in" title="User"><span className="user-nav__name chevron">My Username</span></button>
@@ -20,7 +19,36 @@ function App() {
           </ul>
         </div>
       </header>
-      <div>Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br /></div>
+      <section className="main">
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+      </section>
     </div>
   );
 }

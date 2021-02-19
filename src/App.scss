@@ -1,3 +1,43 @@
+//Mixins
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+// Small devices
+@mixin screen-sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin screen-md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin screen-lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin screen-xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
 //Colours
 $greyLight: #EDEDED;
 $greyDark: #333;
@@ -16,6 +56,7 @@ body {
   color: $fontColor;
   font-size: $fontSize;
   line-height: $lineHeight;
+  padding: 0 $margin;
 }
 
 button {
@@ -37,7 +78,12 @@ button {
 	vertical-align: middle;
 	width: $chevronWidth;
 
-  .user-nav__icon--logged-in:hover & {
+  .user-nav:hover &,
+  .user-nav:focus &,
+  .user-nav:active &,
+  .user-nav__icon--logged-in:hover &,
+  .user-nav__icon--logged-in:focus &,
+  .user-nav__icon--logged-in:active & {
     top: -1px;
     transform: rotate(135deg);
   }
@@ -50,18 +96,21 @@ button {
   height: 70px;
   border-bottom: 1px solid $greyLight;
   box-shadow: 0 1px 2px $greyLight;
+  left: 0;
   padding-left: $margin;
   padding-right: $margin;
-  position: sticky;
+  position: fixed;
+  right: 0;
   top: 0;
 }
 
-.logo {
-
+.logo__img {
+  width: 100%;
 }
 
 .user-nav {
   margin-left: auto;
+  margin-right: -$margin/2;
   position: relative;
 }
 
@@ -76,10 +125,21 @@ button {
 }
 
 .user-nav__icon--logged-in {
-  background-position: calc(100% - #{$iconClickArea/4}) center;
-  padding-right: $iconClickArea + $margin;
-  white-space: nowrap;
-  width: auto;
+
+  @include screen-sm {
+    background-position: calc(100% - #{$iconClickArea/4}) center;
+    padding-right: $iconClickArea + $margin;
+    white-space: nowrap;
+    width: auto;
+  }
+}
+
+.user-nav__name {
+  display: none;
+
+  @include screen-sm {
+      display: block;
+  }
 }
 
 .user-nav__items {
@@ -87,13 +147,27 @@ button {
   border: 1px solid $greyLight;
   border-radius: 5px;
   box-shadow: 0 1px 5px $greyDark2;
+  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
   position: absolute;
-  right: $iconClickArea/4;
+  right: 0;
   text-transform: capitalize;
   top: $iconClickArea;
+
+  @include screen-sm {
+    right: $iconClickArea/4;
+  }
+
+  .user-nav:hover &,
+  .user-nav:focus &,
+  .user-nav:active &,
+  .user-nav__icon--logged-in:hover + &,
+  .user-nav__icon--logged-in:focus + &,
+  .user-nav__icon--logged-in:active + & {
+    display: block;
+  }
 }
 
 .user-nav__item {
