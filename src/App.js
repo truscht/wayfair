@@ -1,23 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Header />
+      <section className="main">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lots of paragraphs<br />
+          to simulate sticky header.
         </p>
-        <a
-          className="App-link"
-          href="https://www.wayfair.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Wayfair
-        </a>
-      </header>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+      </section>
     </div>
   );
 }

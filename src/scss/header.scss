@@ -1,0 +1,94 @@
+.header {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  height: $headerHeight;
+  border-bottom: 1px solid $greyLight;
+  box-shadow: 0 1px 2px $greyLight;
+  left: 0;
+  padding-left: $margin;
+  padding-right: $margin;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.user-nav {
+  margin-left: auto;
+  margin-right: -$margin/2;
+  position: relative;
+}
+
+.user-nav__icon {
+  background: url('../img/icon-user.svg') center no-repeat;
+  background-size: $iconClickArea/2;
+  border: none;
+  cursor: pointer;
+  height: $iconClickArea;
+  padding: 0;
+  width: $iconClickArea;
+}
+
+.user-nav__icon--logged-in {
+
+  @include screen-sm {
+    background-position: calc(100% - #{$iconClickArea/4}) center;
+    padding-right: $iconClickArea + $margin;
+    white-space: nowrap;
+    width: auto;
+  }
+}
+
+.user-nav__name {
+  display: none;
+
+  @include screen-sm {
+      display: block;
+  }
+}
+
+.user-nav__items {
+  background-color: $white;
+  border: 1px solid $greyLight;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px $greyDark2;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-transform: capitalize;
+  top: $iconClickArea;
+
+  @include screen-sm {
+    right: $iconClickArea/4;
+  }
+
+  .user-nav:hover &,
+  .user-nav:focus &,
+  .user-nav:active &,
+  .user-nav__icon--logged-in:hover + &,
+  .user-nav__icon--logged-in:focus + &,
+  .user-nav__icon--logged-in:active + & {
+    display: block;
+  }
+}
+
+.user-nav__link {
+  color: $fontColor;
+  display: block;
+  padding: $margin/2 $margin;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $greyLight;
+  }
+}
