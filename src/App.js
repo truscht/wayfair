@@ -10,7 +10,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </a>
         <div className="user-nav">
-          <button className="user-nav__icon" title="User"></button>
+          <button className="user-nav__icon user-nav__icon--logged-in" title="User"><span className="user-nav__name chevron">My Username</span></button>
           <ul className="user-nav__items">
             <li className="user-nav__item"><a href="#" className="user-nav__link">Account settings</a></li>
             <li className="user-nav__item"><a href="#" className="user-nav__link">User management</a></li>

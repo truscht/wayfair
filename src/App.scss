@@ -5,13 +5,42 @@ $greyDark2: #999;
 $white: #FFF;
 //Settings
 $margin: 25px;
-$iconClickArea: 50px;
 $fontColor: $greyDark;
+$fontSize: 16px;
+$lineHeight: 24px;
+//Styling
+$iconClickArea: 50px;
+$chevronWidth: 5px;
 
 body {
   color: $fontColor;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+button {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.chevron::after {
+	border-style: solid;
+	border-width: 2px 2px 0 0;
+	content: '';
+	display: inline-block;
+	height: $chevronWidth;
+	left: $chevronWidth*2;
+	position: relative;
+	top: -1px;
+	transform: rotate(-45deg);
+  transition: transform 0.3s;
+	vertical-align: middle;
+	width: $chevronWidth;
+
+  .user-nav__icon--logged-in:hover & {
+    top: -1px;
+    transform: rotate(135deg);
+  }
 }
 
 .header {
@@ -44,6 +73,13 @@ body {
   height: $iconClickArea;
   padding: 0;
   width: $iconClickArea;
+}
+
+.user-nav__icon--logged-in {
+  background-position: calc(100% - #{$iconClickArea/4}) center;
+  padding-right: $iconClickArea + $margin;
+  white-space: nowrap;
+  width: auto;
 }
 
 .user-nav__items {
