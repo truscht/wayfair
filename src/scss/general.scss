@@ -1,0 +1,36 @@
+body {
+  color: $fontColor;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  padding: $headerHeight $margin 0;
+}
+
+button {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.chevron::after {
+	border-style: solid;
+	border-width: 2px 2px 0 0;
+	content: '';
+	display: inline-block;
+	height: $chevronWidth;
+	left: $chevronWidth*2;
+	position: relative;
+	top: -1px;
+	transform: rotate(-45deg);
+  transition: transform 0.3s;
+	vertical-align: middle;
+	width: $chevronWidth;
+
+  .user-nav:hover &,
+  .user-nav:focus &,
+  .user-nav:active &,
+  .user-nav__icon--logged-in:hover &,
+  .user-nav__icon--logged-in:focus &,
+  .user-nav__icon--logged-in:active & {
+    top: -1px;
+    transform: rotate(135deg);
+  }
+}

@@ -1,4 +1,4 @@
-import logo from './wayfair-partner-home-logo.png';
+import logo from './img/wayfair-partner-home-logo.png';
 import './App.scss';
 
 function App() {
@@ -20,6 +20,34 @@ function App() {
         </div>
       </header>
       <section className="main">
+        <p>
+          Lots of paragraphs<br />
+          to simulate sticky header.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
+        <p>
+          Lorem ipsum <br />
+          dolor sit amet.
+        </p>
         <p>
           Lorem ipsum <br />
           dolor sit amet.

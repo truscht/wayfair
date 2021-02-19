@@ -1,0 +1,19 @@
+//Screen sizes
+$screen-sm-min: 576px; //Small tablets and large smartphones (landscape view)
+$screen-md-min: 768px; //Small tablets (portrait view)
+$screen-lg-min: 992px; //Tablets and small desktops
+$screen-xl-min: 1200px; //Large tablets and desktops
+//Colours
+$greyLight: #EDEDED;
+$greyDark: #333;
+$greyDark2: #999;
+$white: #FFF;
+//Settings
+$margin: 25px;
+$fontColor: $greyDark;
+$fontSize: 16px;
+$lineHeight: 24px;
+//Styling
+$headerHeight: 70px;
+$iconClickArea: 50px;
+$chevronWidth: 5px;
